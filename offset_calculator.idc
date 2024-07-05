@@ -34,6 +34,7 @@ static main()
 	if (iOffset > -1)
 	{
 		Message("Func \'%s\' vable offset is %d\n\n", GetFunctionName(Qword(pSelectedAddr)), iOffset);
+		MakeComm(pSelectedAddr, sprintf("%d", iOffset));
 	}
 	else
 	{
