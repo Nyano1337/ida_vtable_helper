@@ -2,15 +2,12 @@
 
 static main()
 {
-	SetStatus(IDA_STATUS_WORK);
-
 	auto pSelectedAddr = ScreenEA();
 	
 	if (pSelectedAddr == BADADDR)
 	{
 		Message("** No vtable selected! Aborted **");
 		Warning("No vtable selected!\nSelect vtable block first.");							
-		SetStatus(IDA_STATUS_READY);
 		return;
 	}
 	
@@ -42,6 +39,4 @@ static main()
 	}
 
 	Message("===================================\n\n");
-
-	SetStatus(IDA_STATUS_READY);
 }
