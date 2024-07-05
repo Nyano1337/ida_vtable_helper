@@ -2,8 +2,6 @@
 
 static main()
 {
-	SetStatus(IDA_STATUS_WORK);
-
 	auto pSelectedAddr = ScreenEA();
 	if (!strlen(GetFunctionName(Qword(pSelectedAddr))) || pSelectedAddr == BADADDR)
 	{
